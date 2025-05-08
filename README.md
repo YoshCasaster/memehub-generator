@@ -1,4 +1,4 @@
-# 🔥 Meme Generator Kekinian
+# 🔥 Meme HUB Generator
 
 <div align="center">
   <img src="https://github.com/YoshCasaster/store_db/blob/main/memegen.png?raw=true" alt="Meme Generator Preview" width="100%">
@@ -17,24 +17,24 @@ Sup gaes! Ini tuh project meme generator yang bisa bikin meme kekinian pake temp
 - 🔒 Anti spam & secure abis
 - 📱 Responsive di hape, tablet, sama laptop
 
-## 🛠️ Cara Install
+## 🛠️ Cara Install Local
 
 Lu butuh install ini dulu ya gaes:
 ```bash
 - Node.js v20.10.0 ke atas
-- NPM (Node Package Manager)
+- NPM v10.0.0 ke atas
 ```
 
 Trus tinggal:
 
 1. Clone repo ini ke komputer lu
 ```bash
-git clone https://github.com/YoshCasaster/memehub-generator.git
+git clone https://github.com/YoshCasaster/meme-generator.git
 ```
 
 2. Masuk ke folder projectnya
 ```bash
-cd memehub-generator
+cd meme-generator
 ```
 
 3. Install semua yang dibutuhin
@@ -52,6 +52,42 @@ npm run dev
 http://localhost:3000
 ```
 
+## 🚂 Deploy ke Railway
+
+Kalo mau deploy ke Railway, ikutin step ini gaes:
+
+1. **Fork Repository Ini**
+   - Fork repo ini ke GitHub lu
+
+2. **Setup di Railway**
+   - Bikin project baru di Railway
+   - Connect sama GitHub repository yang udah lu fork
+   - Set environment variables yang dibutuhin:
+   ```
+   NODE_ENV=production
+   SESSION_SECRET=<random-string-minimal-24-karakter>
+   RATE_LIMIT_MAX=10
+   ```
+
+3. **Pastiin File Template Ada**
+   - Bikin folder `template/` di root project
+   - Masukin file `phub.png` dan `xnxx.png` ke folder itu
+
+4. **Struktur File yang Harus Ada**
+   ```
+   ├── Dockerfile
+   ├── Procfile
+   ├── package.json
+   ├── server.js
+   ├── views/
+   │   └── index.ejs
+   ├── template/
+   │   ├── phub.png
+   │   └── xnxx.png
+   └── public/
+       └── output/
+   ```
+
 ## 🎯 Cara Pake
 
 1. Pilih template yang lu mau (phub apa xnxx)
@@ -67,6 +103,7 @@ http://localhost:3000
 - EJS buat view engine
 - Bootstrap 5 buat UI yang kece
 - Canvas buat edit gambar
+- Docker buat deployment
 - Rate limiting buat anti spam
 
 ## 🤝 Mau Kontribusi?
@@ -86,12 +123,14 @@ Gas dong! Kita open source nih. Lu bisa:
 - Max file size: 5MB
 - Format yang didukung: jpg, jpeg, png, gif
 - File bakal dihapus otomatis setelah 30 menit
+- Session timeout: 24 jam
 
 ## 🔗 Link Penting
 
 - [Website Demo](https://codefomo.xyz)
 - [E-KTP Generator](https://e-ktp-generator-production.up.railway.app)
 - [GitHub](https://github.com/YoshCasaster)
+- [WhatsApp Channel](https://www.whatsapp.com/channel/0029VafzAqeFSAszE4uo132D)
 
 ## 👨‍💻 Author
 
